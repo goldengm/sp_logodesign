@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "composite": true,
+        "allowJs": true,
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "declaration": false,
+        "baseUrl": "./resources/app",
+        "paths": {
+            "@/*": ["","./*"],
+            "@lidojs/utils/color": ["/packages/utils/dist", "./packages/utils/src/color"],
+            "@lidojs/utils/keyboard": ["/packages/utils/dist", "./packages/utils/src/keyboard"],
+            "@lidojs/core": ["/packages/core/dist", "./packages/core/src"],
+            "@lidojs/color-picker": ["/packages/color-picker/dist", "./packages/color-picker/src"],
+            "@lidojs/editor": ["/packages/editor/dist", "./packages/editor/src"],
+            "@lidojs/utils": ["/packages/utils/dist", "./packages/utils/src"],
+            "@lidojs/screen": ["/packages/screen/dist", "./packages/screen/src"]
+        }
+    },
+    "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["**/node_modules", "**/dist"],
+    "references": [{ "path": "./tsconfig.node.json" }],
+    "lib": ["WebWorker"]
+}

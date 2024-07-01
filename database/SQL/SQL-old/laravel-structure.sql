@@ -1,0 +1,46 @@
+CREATE TABLE `fonts` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL UNIQUE,
+    `urls` JSON NOT NULL,
+    `created_at` TIMESTAMP NULL,
+    `updated_at` TIMESTAMP NULL
+);
+
+
+CREATE TABLE `frames` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `clipPath` VARCHAR(255) NOT NULL UNIQUE,
+    `img` VARCHAR(255) NOT NULL,
+    `width` INT NOT NULL,
+    `height` INT NOT NULL,
+    `created_at` TIMESTAMP NULL,
+    `updated_at` TIMESTAMP NULL
+);
+
+
+CREATE TABLE `images` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `img` VARCHAR(255) NOT NULL UNIQUE,
+    `created_at` TIMESTAMP NULL,
+    `updated_at` TIMESTAMP NULL
+);
+
+
+CREATE TABLE `templates` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `img` VARCHAR(255) NOT NULL UNIQUE,
+    `data` TEXT NOT NULL,
+    `created_at` TIMESTAMP NULL,
+    `updated_at` TIMESTAMP NULL
+);
+
+
+CREATE TABLE `texts` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `img` VARCHAR(255) NOT NULL UNIQUE,
+    `data` TEXT NOT NULL,
+    `created_at` TIMESTAMP NULL,
+    `updated_at` TIMESTAMP NULL
+);
+
+
